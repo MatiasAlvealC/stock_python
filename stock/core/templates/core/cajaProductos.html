@@ -1,0 +1,41 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+<div class="cart-item">
+    <form method="post" action="">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="producto_nombre">Nombre del producto:</label>
+            <input type="text" id="producto_nombre" name="producto_nombre" value="{{ item.producto.nombre }}" readonly />
+        </div>
+
+        <div class="form-group">
+            <label for="producto_precio">Precio:</label>
+            <input type="number" id="producto_precio" name="producto_precio" value="{{ item.producto.precio }}" readonly />
+        </div>
+
+        <div class="quantity-control">
+            <button type="button" onclick="cambiarCantidad(-1)" class="quantity-btn">-</button>
+            <input type="number" id="id_cantidad" name="cantidad" value="{{ item.cantidad }}" min="1">
+            <button type="button" onclick="cambiarCantidad(1)" class="quantity-btn">+</button>
+        </div>
+
+        <button type="submit" class="update-btn">Actualizar</button>
+    </form>
+
+    <form method="post" action="{% url 'eliminar_producto' item.id %}">
+        {% csrf_token %}
+        <button type="submit" class="remove-btn">Eliminar</button>
+    </form>
+</div>
+
+<script>
+    function cambiarCantidad(delta) {
+        const cantidadInput = document.getElementById('id_cantidad');
+        let cantidad = parseInt(cantidadInput.value);
+        if (cantidad + delta > 0) {
+            cantidadInput.value = cantidad + delta;
+        }
+    }
+</script>
+{% endblock %}

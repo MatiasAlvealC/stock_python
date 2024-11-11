@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'core/css/style.css' %}" type="text/css">
+    <title>Carpe Diem</title>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-content">
+      <div class="navbar-brand">
+        <button class="menu-toggle" onclick="toggleMenu()">
+        </button>
+        </div>
+          <!-- Menú de Login (Arriba a la derecha) -->
+          <ul class="navbar-login">
+            <li><a href="/">Iniciar sesión</a></li>
+          </ul>
+    </div>
+
+        <!-- Lista de enlaces de navegación (Abajo a la derecha) -->
+    <ul class="navbar-menu">
+      <li><a href="/inventario/">Inventario</a></li>
+      <li><a href="/caja/">Caja</a></li>
+      <li><a href="/reporte/">Reporte</a></li>
+    </ul>
+  </nav>
+  {% block content %}{% endblock %}
+
+  <script src="{% static 'core/js/navbar.js' %}"></script>
+</body>
+</html>

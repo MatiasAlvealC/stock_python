@@ -1,0 +1,15 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+<div class="login-container">
+    <div class="login-box">
+        <h1>Acceder</h1>
+        <form method="POST" action="{% url 'login' %}">
+            <input type="text" name="rut" placeholder="Rut" class="login-input" required />
+            <input type="password" name="password" placeholder="Contraseña" class="login-input" required />
+            <button type="submit" class="login-button">Iniciar sesión</button>
+        </form>
+        <p class="signup-link"><a href="/register/">Regístrate</a></p>
+    </div>
+</div>
+{% endblock %}

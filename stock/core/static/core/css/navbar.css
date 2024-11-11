@@ -1,0 +1,69 @@
+
+/* NAVARRRRRR*/
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-image: url('../nav.jpeg'); /* Cambia esto por la ruta a tu imagen */
+    background-size: cover; /* Para que la imagen cubra todo el fondo */
+    background-position: center; /* Centra la imagen */
+    height: 190px; /* Ajusta la altura del navbar si es necesario */
+} 
+.navbar-content {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; /* Alinea el contenido a la derecha */
+    position: relative;
+}
+
+.navbar-login {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    position:fixed;
+    top:5%; /* Coloca el login en la parte superior derecha */
+    right: 3%;
+}
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin-top: auto; /* Coloca el menú en la parte inferior */
+    padding: 0;
+    justify-content: flex-end;
+}
+
+.navbar-menu li {
+    margin: 0 10px;
+}
+
+.navbar-menu a,
+.navbar-login a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar-menu a:hover,
+.navbar-menu a.active,
+.navbar-login a:hover,
+.navbar-login a.active {
+    background-color: #4CAF50;
+    color: white; /* Asegura que el texto permanezca blanco al pasar el mouse */
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.open .navbar-menu {
+    display: block; /* Para móviles, puedes personalizar esto */
+}

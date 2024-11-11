@@ -1,0 +1,51 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+<div class="cart-container">
+    <h2>Carrito de Compras</h2>
+
+    <ul>
+        {% for item in items %}
+            <li>
+                <span>{{ item.producto.nombre }} - ${{ item.producto.precio }} x {{ item.cantidad }}</span>
+                <form method="post" action="">
+                    {% csrf_token %}
+                    <input type="hidden" name="item_id" value="{{ item.id }}">
+                    <button type="submit" name="remove_product">Eliminar Producto</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <div class="cart-total">
+        <span>Total:</span>
+        <span>${{ total }}</span>
+    </div>
+
+    <form method="post" action="">
+        {% csrf_token %}
+        <button type="submit" name="add_product" class="add-product-btn">Agregar Producto</button>
+    </form>
+
+    <button class="pay-button" onclick="togglePaymentMethods()">Pagar: ${{ total }}</button>
+
+    <!-- Métodos de pago -->
+    <div id="payment-methods" style="display:none;" class="payment-methods">
+        <h3>Métodos de Pago</h3>
+        <button onclick="selectPaymentMethod('Efectivo')" class="payment-btn">Efectivo</button>
+        <button onclick="selectPaymentMethod('Débito')" class="payment-btn">Débito</button>
+        <button onclick="selectPaymentMethod('Crédito')" class="payment-btn">Crédito</button>
+    </div>
+</div>
+
+<script>
+    function togglePaymentMethods() {
+        const methods = document.getElementById('payment-methods');
+        methods.style.display = methods.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function selectPaymentMethod(method) {
+        alert(`Has seleccionado ${method}`);
+    }
+</script>
+{% endblock %}

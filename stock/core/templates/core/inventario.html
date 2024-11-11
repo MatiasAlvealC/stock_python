@@ -1,0 +1,26 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+<div className="inventario-container">
+  <div className="inventario-card">
+    <h1>Inventario</h1>
+      <form className="inventario-form">
+        <input type="text" placeholder="Nombre producto" className="small-input" />
+        <input type="text" placeholder="Código" className="small-input" />
+        <input type="number" placeholder="Cantidad" className="small-input" />
+        <input type="number" placeholder="Margen ganancia" className="small-input" />
+        <input type="number" placeholder="Precio" className="small-input" />
+        <select className="small-input">
+          <option value="">Seleccione categoría</option>
+          <option value="categoria1">Categoría 1</option>
+          <option value="categoria2">Categoría 2</option>
+        </select>
+        <input type="number" placeholder="Costo producto" className="small-input" />
+        <button type="submit" className="submit-button small-button">Agregar producto</button>
+      </form>
+
+    <p className="inventario-lista">Aquí se mostrará la lista de inventario.</p>
+  </div>
+</div>
+
+{% endblock %}
