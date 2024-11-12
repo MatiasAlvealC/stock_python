@@ -1,39 +1,55 @@
+/* Primero, aseguremos que el body no tenga márgenes */
+
+.bodynav {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
 
 /* NAVARRRRRR*/
 
 .navbar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    background-image: url('../nav.jpeg'); /* Cambia esto por la ruta a tu imagen */
-    background-size: cover; /* Para que la imagen cubra todo el fondo */
-    background-position: center; /* Centra la imagen */
-    height: 190px; /* Ajusta la altura del navbar si es necesario */
-} 
+    flex-direction: column; /* Cambiamos a columna para mejor organización */
+    width: 100%; /* Aseguramos que ocupe todo el ancho */
+    height: 100px;
+    background-image: url('../nav.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    position: fixed; /* Fijamos el navbar */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
 .navbar-content {
     width: 100%;
     display: flex;
-    justify-content: flex-end; /* Alinea el contenido a la derecha */
-    position: relative;
+    justify-content: space-between; /* Cambiamos a space-between */
+    align-items: flex-start;
+    padding: 1rem;
 }
 
 .navbar-login {
     list-style: none;
     margin: 0;
     padding: 0;
-    display: flex;
-    position:fixed;
-    top:5%; /* Coloca el login en la parte superior derecha */
-    right: 3%;
+    position: absolute;
+    top: 20px;
+    right: 30px;
 }
+
 .navbar-menu {
     list-style: none;
     display: flex;
-    gap: 1rem;
-    margin-top: auto; /* Coloca el menú en la parte inferior */
-    padding: 0;
-    justify-content: flex-end;
+    gap: 2rem;
+    margin: 0;
+    padding: 1rem;
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
 }
 
 .navbar-menu li {
