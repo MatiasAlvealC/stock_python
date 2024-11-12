@@ -73,7 +73,7 @@
 
  */
 
- body, html {
+.bodylogin, html {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -197,7 +197,7 @@ input:-ms-input-placeholder {
   */
 
 
-  body, html {
+.bodyregister, html {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -317,7 +317,7 @@ Inventario
 
 */
 
-body, html {
+.bodyonventario, html {
   margin: 0;
   padding: 0;
   height: 100%;
@@ -416,7 +416,7 @@ input, select {
 
 */
 
-body, html {
+.bodycaja, html {
   height: 100%;
   margin: 0;
   padding: 0;
