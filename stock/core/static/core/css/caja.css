@@ -1,63 +1,55 @@
-body, html {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    background-color: #ffffff;
-}
 
 .cart-container {
+    display: flex;
     background-color: #f9f9f9;
     padding: 2rem;
     width: 80%;
     min-height: 50vh;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(1, 1, 1, 1);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
-}
-
-h2 {
+    margin-top: 150px;
+  }
+  
+  h2 {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
     color: #333;
-}
-
-.cart-item {
+  }
+  
+  .cart-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
     width: 100%;
     gap: 2rem; /* Añade más espacio entre cada sección de la fila */
-}
-
-.cart-item input {
+  }
+  
+  .cart-item input {
     padding: 0.5rem;
     font-size: 1.2rem;
     width: 100%;
     border: 1px solid #ccc;
     border-radius: 4px;
     background-color: #fff;
-}
-
-.cart-item span {
+  }
+  
+  .cart-item span {
     font-size: 1.2rem; /* Ajusta el tamaño del texto si es necesario */
-}
-
-.quantity-control {
+  }
+  
+  .quantity-control {
     display: flex;
     align-items: center;
     gap: 1rem; /* Añade espacio entre los botones de cantidad y el número */
-}
-
-.quantity-btn {
+  }
+  
+  .quantity-btn {
     background-color: #4CAF50;
     color: white;
     padding: 0.7rem;
@@ -66,9 +58,9 @@ h2 {
     cursor: pointer;
     font-size: 1.2rem;
     margin: 0 0.5rem;
-}
-
-.remove-btn {
+  }
+  
+  .remove-btn {
     background-color: #e74c3c;
     color: white;
     padding: 0.7rem;
@@ -76,18 +68,18 @@ h2 {
     border-radius: 4px;
     cursor: pointer;
     font-size: 1.2rem;
-}
-
-.cart-total {
+  }
+  
+  .cart-total {
     display: flex;
     justify-content: space-between;
     margin-top: 1rem;
     font-size: 1.5rem;
     font-weight: bold;
     width: 100%;
-}
-
-.pay-button {
+  }
+  
+  .pay-button {
     background-color: #4CAF50;
     color: white;
     padding: 1.5rem;
@@ -97,9 +89,9 @@ h2 {
     width: 100%;
     margin-top: 1.5rem;
     font-size: 1.5rem;
-}
-
-.add-product-btn {
+  }
+  
+  .add-product-btn {
     background-color: #4CAF50;
     color: white;
     padding: 1rem;
@@ -109,8 +101,8 @@ h2 {
     font-size: 1.2rem;
     width: 100%;
     margin-bottom: 1.5rem;
-}
-.cart-item input {
+  }
+  .cart-item input {
     padding: 0.5rem;
     font-size: 1.2rem;
     width: 100%;
@@ -118,8 +110,8 @@ h2 {
     border-radius: 4px;
     background-color: #fff;
     color: #333; /* Agrega esta línea para que el texto sea visible */
-}
-.payment-methods {
+  }
+  .payment-methods {
     margin-top: 20px;
     border-top: 1px solid #ccc;
     padding-top: 10px;
